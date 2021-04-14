@@ -15,8 +15,8 @@
 #include <memory>
 
 #include <fmt/color.h>
+#include <nlohmann/json.hpp>
 
-#include "vendor/nlohmann/json.hpp"
 #include "Clickable.h"
 #include "FileOpen.h"
 

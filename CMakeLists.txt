@@ -29,6 +29,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 include_directories(
     vendor
+    vendor/json/include
 )
 
 set(PROJECT_SOURCES

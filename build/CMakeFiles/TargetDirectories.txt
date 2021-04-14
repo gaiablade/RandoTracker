@@ -1,4 +1,0 @@
-/home/caleb/Programming/Tracker/build/CMakeFiles/rebuild_cache.dir
-/home/caleb/Programming/Tracker/build/CMakeFiles/edit_cache.dir
-/home/caleb/Programming/Tracker/build/CMakeFiles/Tracker.dir
-/home/caleb/Programming/Tracker/build/CMakeFiles/Tracker_autogen.dir
