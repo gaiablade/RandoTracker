@@ -1,9 +1,9 @@
-#ifndef CLICKABLE_H
-#define CLICKABLE_H
+#pragma once
 
 #include <iostream>
 
 #include <QLabel>
+#include <QMouseEvent>
 #include <QPixmap>
 
 class Clickable : public QLabel
@@ -16,7 +16,7 @@ signals:
     void clicked();
 
 private:
-    void mousePressEvent(QMouseEvent* event);
+    virtual void mousePressEvent(QMouseEvent* event) override;
     void toggleCollected();
 
 private:
@@ -24,5 +24,3 @@ private:
     QImage darkened;
     bool collected{false};
 };
-
-#endif // CLICKABLE_H

@@ -1,0 +1,230 @@
+{
+    "game_title": "The Legend of Zelda - Ocarina of Time",
+    "tabs": [
+        {
+            "tab_name": "Items_2",
+            "grid_width": 6,
+            "grid_height": 4,
+            "bg": "images/item_menu.png",
+            "rows": [
+                [
+                    {
+                        "name": "Deku Sticks",
+                        "img": "images/deku_sticks.png",
+                        "grid_x": 0,
+                        "grid_y": 0
+                    },
+                    {
+                        "name": "Deku Nuts",
+                        "img": "images/deku_nuts.png"
+                    },
+                    {
+                        "name": "Bombs",
+                        "img": "images/bombs.png"
+                    },
+                    {
+                        "name": "Bow",
+                        "img": "images/bow.png"
+                    },
+                    {
+                        "name": "Fire Arrow",
+                        "img": "images/fire_arrow.png"
+                    },
+                    {
+                        "name": "Din's Fire",
+                        "img": "images/dins_fire.png"
+                    }
+                ],
+                [
+                    {
+                        "name": "Slingshot",
+                        "img": "images/slingshot.png"
+                    },
+                    {
+                        "name": "Ocarina of Time",
+                        "img": "images/ocarina_of_time.png"
+                    },
+                    {
+                        "name": "Bombchu",
+                        "img": "images/bombchu.png"
+                    },
+                    {
+                        "name": "Hookshot",
+                        "img": "images/hookshot.png"
+                    },
+                    {
+                        "name": "Ice Arrow",
+                        "img": "images/ice_arrow.png"
+                    },
+                    {
+                        "name": "Farore's Wind",
+                        "img": "images/farores_wind.png"
+                    }
+                ],
+                [
+                    {
+                        "name": "Boomerang",
+                        "img": "images/boomerang.png"
+                    },
+                    {
+                        "name": "Lens of Truth",
+                        "img": "images/lens_of_truth.png"
+                    },
+                    {
+                        "name": "Beans",
+                        "img": "images/beans.png"
+                    },
+                    {
+                        "name": "Megaton Hammer",
+                        "img": "images/megaton_hammer.png"
+                    },
+                    {
+                        "name": "Light Arrow",
+                        "img": "images/light_arrow.png"
+                    },
+                    {
+                        "name": "Nayru's Love",
+                        "img": "images/nayrus_love.png"
+                    }
+                ],
+                [
+                    {
+                        "name": "Bottle",
+                        "img": "images/bottle.png"
+                    },
+                    {
+                        "name": "Bottle",
+                        "img": "images/bottle.png"
+                    },
+                    {
+                        "name": "Bottle",
+                        "img": "images/bottle.png"
+                    },
+                    {
+                        "name": "Bottle",
+                        "img": "images/bottle.png"
+                    },
+                    {
+                        "name": "Quest Item",
+                        "img": "images/quest_item.png"
+                    },
+                    {
+                        "name": "Mask of Truth",
+                        "img": "images/mask_of_truth.png"
+                    }
+                ]
+            ]
+        },
+        {
+            "tab_name": "Equipment_2",
+            "grid_width": 7,
+            "grid_height": 4,
+            "rows": [
+                [
+                    {
+                        "name": "Quiver",
+                        "img": "images/quiver.png",
+                        "grid_x": 0,
+                        "grid_y": 0
+                    },
+                    {
+                        "name": "Kokiri Sword",
+                        "img": "images/kokiri_sword.png",
+                        "grid_x": 4,
+                        "grid_y": 0
+                    },
+                    {
+                        "name": "Master Sword",
+                        "img": "images/master_sword.png",
+                        "grid_x": 5,
+                        "grid_y": 0
+                    },
+                    {
+                        "name": "Biggoron Sword",
+                        "img": "images/biggoron_sword.png",
+                        "grid_x": 6,
+                        "grid_y": 0
+                    }
+                ],
+                [
+                    {
+                        "name": "Bomb Bag",
+                        "img": "images/bomb_bag.png",
+                        "grid_x": 0,
+                        "grid_y": 1
+                    },
+                    {
+                        "name": "Deku Shield",
+                        "img": "images/deku_shield.png",
+                        "grid_x": 4,
+                        "grid_y": 1
+                    },
+                    {
+                        "name": "Hylian Shield",
+                        "img": "images/hylian_shield.png",
+                        "grid_x": 5,
+                        "grid_y": 1
+                    },
+                    {
+                        "name": "Mirror Shield",
+                        "img": "images/mirror_shield.png",
+                        "grid_x": 6,
+                        "grid_y": 1
+                    }
+                ],
+                [
+                    {
+                        "name": "Goron Bracelet",
+                        "img": "images/goron_bracelet.png",
+                        "grid_x": 0,
+                        "grid_y": 2
+                    },
+                    {
+                        "name": "Kokiri Tunic",
+                        "img": "images/kokiri_tunic.png",
+                        "grid_x": 4,
+                        "grid_y": 2
+                    },
+                    {
+                        "name": "Goron Tunic",
+                        "img": "images/goron_tunic.png",
+                        "grid_x": 5,
+                        "grid_y": 2
+                    },
+                    {
+                        "name": "Zora Tunic",
+                        "img": "images/zora_tunic.png",
+                        "grid_x": 6,
+                        "grid_y": 2
+                    }
+                ],
+                [
+                    {
+                        "name": "Gold Scale",
+                        "img": "images/gold_scale.png",
+                        "grid_x": 0,
+                        "grid_y": 3
+                    },
+                    {
+                        "name": "Boots",
+                        "img": "images/boots.png",
+                        "grid_x": 4,
+                        "grid_y": 3
+                    },
+                    {
+                        "name": "Iron Boots",
+                        "img": "images/iron_boots.png",
+                        "grid_x": 5,
+                        "grid_y": 3
+                    },
+                    {
+                        "name": "Hover Boots",
+                        "img": "images/hover_boots.png",
+                        "grid_x": 6,
+                        "grid_y": 3
+                    }
+                ]
+            ]
+        }
+    ]
+}

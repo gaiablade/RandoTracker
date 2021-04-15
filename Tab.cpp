@@ -4,6 +4,9 @@ Tab::Tab(Tab_Data& tab_data, QWidget* parent)
     : QWidget(parent)
     , layout(std::make_unique<QGridLayout>())
 {
+    setStyleSheet("background-color: #262626; color: #DDDDDD;");
+    setWindowTitle(tab_data.tab_name.c_str());
+
     int row_no = 0;
     for (auto& row: tab_data.rows) {
         int column_no = 0;
@@ -31,4 +34,5 @@ Tab::Tab(Tab_Data& tab_data, QWidget* parent)
     }
 
     this->setLayout(layout.get());
+    this->show();
 }

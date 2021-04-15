@@ -19,11 +19,13 @@ Clickable::Clickable(QString name, QString image_path, QWidget* parent)
     }
     setPixmap(QPixmap::fromImage(darkened));
 
-    connect(this, &Clickable::clicked, &Clickable::toggleCollected);
+    connect(this, &Clickable::clicked, this, &Clickable::toggleCollected);
 }
 
 void Clickable::mousePressEvent(QMouseEvent* event) {
-    emit clicked();
+    if (event->button() == Qt::MouseButton::LeftButton) {
+        emit clicked();
+    }
 }
 
 void Clickable::toggleCollected() {

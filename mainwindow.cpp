@@ -6,6 +6,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    setStyleSheet("background-color: #262626; color: #DDDDDD;");
+    ui->menubar->setStyleSheet("border: 1px solid #222222;");
 }
 
 MainWindow::~MainWindow()
@@ -16,6 +19,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionOpen_triggered()
 {
+    if (!tabs.empty()) {
+        for (auto& tab : tabs) {
+            tab->close();
+        }
+        tabs.clear();
+    }
     const QString filename = QFileDialog::getOpenFileName(this, tr("Select a file"), "./tracker_files", tr("JSON Files (*.json)"));
     if (!filename.isEmpty()) {
         auto file = std::filesystem::path(filename.toStdString());
@@ -50,6 +59,23 @@ void MainWindow::on_actionOpen_triggered()
                 message.exec();
                 return;
             }
+        }
+    }
+}
+
+void MainWindow::on_actionExit_triggered()
+{
+    close();
+}
+
+void MainWindow::on_openNewWindowButton_clicked()
+{
+    if (tab_widget) {
+        //tab_widget->currentWidget()->setParent(nullptr);
+        QWidget* c = tab_widget->currentWidget();
+        if (c) {
+            c->setParent(nullptr);
+            c->show();
         }
     }
 }

@@ -40,6 +40,10 @@ public:
 private slots:
     void on_actionOpen_triggered();
 
+    void on_actionExit_triggered();
+
+    void on_openNewWindowButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     std::unique_ptr<QGridLayout> grid_layout;
