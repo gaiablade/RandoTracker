@@ -7,12 +7,12 @@ Clickable::Clickable(QString name, QString image_path, QWidget* parent)
     this->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     this->setToolTip(name);
 
-    QImage darkened = image.scaledToWidth(image.width() * 2);
+    darkened = image.scaledToWidth(image.width() * 2);
     for (int i = 0; i < darkened.height(); i++) {
         for (int j = 0; j < darkened.width(); j++) {
-            if (darkened.pixelColor(j, i).alpha() > 0.99) {
+            if (darkened.pixelColor(j, i).alpha() > 100) {
                 QColor color = QColor(darkened.pixelColor(j, i));
-                color.setRgb(color.red() * 0.5, color.green() * 0.5, color.blue() * 0.5);
+                color.setRgb(color.red() * 0.2, color.green() * 0.2, color.blue() * 0.2);
                 darkened.setPixelColor(j, i, color);
             }
         }
@@ -32,16 +32,6 @@ void Clickable::toggleCollected() {
     if (collected) {
         setPixmap(QPixmap::fromImage(image.scaledToWidth(image.width() * 2)));
     } else {
-        QImage darkened = image.scaledToWidth(image.width() * 2);
-        for (int i = 0; i < darkened.height(); i++) {
-            for (int j = 0; j < darkened.width(); j++) {
-                if (darkened.pixelColor(j, i).alpha() > 0.99) {
-                    QColor color = QColor(darkened.pixelColor(j, i));
-                    color.setRgb(color.red() * 0.5, color.green() * 0.5, color.blue() * 0.5);
-                    darkened.setPixelColor(j, i, color);
-                }
-            }
-        }
         setPixmap(QPixmap::fromImage(darkened));
     }
 }

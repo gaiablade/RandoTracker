@@ -41,7 +41,7 @@ FileOpen FileOpen::open(const std::string& filename) {
             throw "Error! Attribute \"rows\" must be an array!";
         }
 
-        Tab t;
+        Tab_Data t;
         t.tab_name = tab["tab_name"];
 
         if (tab.find("grid_width") != tab.end()) {
@@ -56,6 +56,13 @@ FileOpen FileOpen::open(const std::string& filename) {
                 throw "Error! Attribute \"grid_height\" must be a number!";
             } else {
                 t.grid_height = tab["grid_height"];
+            }
+        }
+        if (tab.find("bg") != tab.end()) {
+            if (!tab["bg"].is_string()) {
+                throw "Error! Attribute \"bg\" must be a string!";
+            } else {
+                t.background_image = tab["bg"];
             }
         }
 
@@ -77,9 +84,9 @@ FileOpen FileOpen::open(const std::string& filename) {
                 if (!item->operator[]("img").is_string()) {
                     throw "Error! Item attribute \"filename\" must be a string!";
                 }
-                Item i;
+                Item_Data i;
                 i.name = item->operator[]("name");
-                i.filename = item->operator[]("img");
+                i.filename = (fs::path(filename).parent_path() / item->operator[]("img")).string();
 
                 if (item->find("grid_x") != item->end()) {
                     if (!item->operator[]("grid_x").is_number()) {

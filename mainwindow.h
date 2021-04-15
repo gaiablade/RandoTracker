@@ -9,7 +9,6 @@
 #include <QPushButton>
 #include <QTabWidget>
 
-#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <memory>
@@ -19,6 +18,10 @@
 
 #include "Clickable.h"
 #include "FileOpen.h"
+#include "Tab.h"
+
+// filesystem goes at the end to prevent moc bug (why does this exist)
+#include <filesystem>
 
 using Json = nlohmann::json;
 
@@ -41,6 +44,7 @@ private:
     Ui::MainWindow *ui;
     std::unique_ptr<QGridLayout> grid_layout;
     std::unique_ptr<QTabWidget> tab_widget;
+    std::vector<std::unique_ptr<Tab>> tabs;
 };
 
 #endif // MAINWINDOW_H

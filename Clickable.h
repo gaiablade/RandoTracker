@@ -21,6 +21,7 @@ private:
 
 private:
     QImage image;
+    QImage darkened;
     bool collected{false};
 };
 

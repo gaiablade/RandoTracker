@@ -11,6 +11,10 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+
+set(CMAKE_CXX_FLAGS "${CMAKe_CXX_FLAGS} -Wall -Wextra")
+
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
 # Check https://doc.qt.io/qt/deployment-android.html for more information.
 # They need to be set before the find_package( ...) calls below.
@@ -38,10 +42,12 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
 
-        FileOpen.h
-        FileOpen.cpp
         Clickable.h
         Clickable.cpp
+        FileOpen.h
+        FileOpen.cpp
+        Tab.h
+        Tab.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
