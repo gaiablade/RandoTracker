@@ -7,7 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    setStyleSheet("background-color: #262626; color: #DDDDDD;");
+    style_sheet = "background-color: #262626; color: #DDDDDD;";
+    setStyleSheet(style_sheet);
     ui->menubar->setStyleSheet("border: 1px solid #222222;");
 }
 
@@ -47,7 +48,8 @@ void MainWindow::on_actionOpen_triggered()
                 grid_layout->addWidget(tab_widget.get());
 
                 for (auto& tab: fo.tabs) {
-                    tabs.emplace_back(std::make_unique<Tab>(tab));
+                    tabs.emplace_back(std::make_unique<Tab>(tab, this));
+                    tabs.back()->setStyleSheet(style_sheet);
                     tab_widget->addTab(tabs.back().get(), tab.tab_name.c_str());
                 }
 
@@ -77,5 +79,16 @@ void MainWindow::on_openNewWindowButton_clicked()
             c->setParent(nullptr);
             c->show();
         }
+    }
+}
+
+void MainWindow::on_changeBgColor_triggered()
+{
+    auto color = QColorDialog::getRgba();
+    auto color_string = QColor::fromRgb(color).name();
+    style_sheet = fmt::format("background-color: {}; color: #DDDDDD;", color_string.toStdString()).c_str();
+    setStyleSheet(style_sheet);
+    for (auto& tab: tabs) {
+        tab->setStyleSheet(style_sheet);
     }
 }

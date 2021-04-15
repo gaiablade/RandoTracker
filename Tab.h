@@ -19,6 +19,7 @@ class Tab : public QWidget
     Q_OBJECT
 public:
     Tab(Tab_Data& tab_data, QWidget* parent = nullptr);
+    void changeColor(const std::string& color_string);
 private:
     std::unique_ptr<QGridLayout> layout;
     std::vector<std::unique_ptr<Clickable>> icons;

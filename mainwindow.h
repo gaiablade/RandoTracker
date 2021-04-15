@@ -1,12 +1,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QColorDialog>
 #include <QFileDialog>
 #include <QGridLayout>
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QPixmap>
 #include <QPushButton>
+#include <QRgb>
 #include <QTabWidget>
 
 #include <fstream>
@@ -44,11 +46,15 @@ private slots:
 
     void on_openNewWindowButton_clicked();
 
+    void on_changeBgColor_triggered();
+
 private:
     Ui::MainWindow *ui;
     std::unique_ptr<QGridLayout> grid_layout;
     std::unique_ptr<QTabWidget> tab_widget;
     std::vector<std::unique_ptr<Tab>> tabs;
+
+    QString style_sheet;
 };
 
 #endif // MAINWINDOW_H

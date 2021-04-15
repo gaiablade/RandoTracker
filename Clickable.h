@@ -5,6 +5,7 @@
 #include <QLabel>
 #include <QMouseEvent>
 #include <QPixmap>
+#include <QStyle>
 
 class Clickable : public QLabel
 {
