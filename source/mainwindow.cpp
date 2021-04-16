@@ -84,9 +84,12 @@ void MainWindow::on_openNewWindowButton_clicked()
 
 void MainWindow::on_changeBgColor_triggered()
 {
-    auto color = QColorDialog::getRgba();
-    auto color_string = QColor::fromRgb(color).name();
-    style_sheet = fmt::format("background-color: {}; color: #DDDDDD;", color_string.toStdString()).c_str();
+    auto rgb = QColorDialog::getRgba();
+    auto color = QColor::fromRgb(rgb);
+    auto text_color = QColor(255 - color.red(), 255 - color.green(), 255 - color.blue());
+    auto color_string = color.name();
+    auto text_color_string = text_color.name();
+    style_sheet = fmt::format("background-color: {}; color: {};", color_string.toStdString(), text_color_string.toStdString()).c_str();
     setStyleSheet(style_sheet);
     for (auto& tab: tabs) {
         tab->setStyleSheet(style_sheet);

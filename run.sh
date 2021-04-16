@@ -1,3 +1,3 @@
 #!/bin/bash
 
-build/Tracker
+./build/Tracker

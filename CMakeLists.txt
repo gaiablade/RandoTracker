@@ -37,17 +37,17 @@ include_directories(
 )
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        source/main.cpp
+        source/mainwindow.cpp
+        source/mainwindow.h
+        source/mainwindow.ui
 
-        Clickable.h
-        Clickable.cpp
-        FileOpen.h
-        FileOpen.cpp
-        Tab.h
-        Tab.cpp
+        source/Clickable.h
+        source/Clickable.cpp
+        source/FileOpen.h
+        source/FileOpen.cpp
+        source/Tab.h
+        source/Tab.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
